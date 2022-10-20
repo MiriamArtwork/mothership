@@ -100,6 +100,202 @@
           }
         }
       }
+    },
+    "ship1": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/ship1",
+      "sourceRoot": "projects/ship1/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ship1",
+            "index": "projects/ship1/src/index.html",
+            "main": "projects/ship1/src/main.ts",
+            "polyfills": "projects/ship1/src/polyfills.ts",
+            "tsConfig": "projects/ship1/tsconfig.app.json",
+            "assets": [
+              "projects/ship1/src/favicon.ico",
+              "projects/ship1/src/assets"
+            ],
+            "styles": [
+              "projects/ship1/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/ship1/src/environments/environment.ts",
+                  "with": "projects/ship1/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "ship1:build:production"
+            },
+            "development": {
+              "browserTarget": "ship1:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ship1:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ship1/src/test.ts",
+            "polyfills": "projects/ship1/src/polyfills.ts",
+            "tsConfig": "projects/ship1/tsconfig.spec.json",
+            "karmaConfig": "projects/ship1/karma.conf.js",
+            "assets": [
+              "projects/ship1/src/favicon.ico",
+              "projects/ship1/src/assets"
+            ],
+            "styles": [
+              "projects/ship1/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "ship2": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/ship2",
+      "sourceRoot": "projects/ship2/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ship2",
+            "index": "projects/ship2/src/index.html",
+            "main": "projects/ship2/src/main.ts",
+            "polyfills": "projects/ship2/src/polyfills.ts",
+            "tsConfig": "projects/ship2/tsconfig.app.json",
+            "assets": [
+              "projects/ship2/src/favicon.ico",
+              "projects/ship2/src/assets"
+            ],
+            "styles": [
+              "projects/ship2/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/ship2/src/environments/environment.ts",
+                  "with": "projects/ship2/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "ship2:build:production"
+            },
+            "development": {
+              "browserTarget": "ship2:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ship2:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ship2/src/test.ts",
+            "polyfills": "projects/ship2/src/polyfills.ts",
+            "tsConfig": "projects/ship2/tsconfig.spec.json",
+            "karmaConfig": "projects/ship2/karma.conf.js",
+            "assets": [
+              "projects/ship2/src/favicon.ico",
+              "projects/ship2/src/assets"
+            ],
+            "styles": [
+              "projects/ship2/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "defaultProject": "mothership"
